@@ -8,6 +8,7 @@ import MainPage from './MainPage';
 import Products from './Product/prodects';
 import Header from './header/header';
 import Foter from './Foter/Foter';
+import Category from './Home/category';
 
 function App() {
   const { id } = useSharedStore(); 
