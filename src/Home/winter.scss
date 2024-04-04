@@ -1,0 +1,39 @@
+$globalColor: #D09324;
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr ));
+    gap: 20px;
+}
+.card{
+    width: 100%;
+    & img{
+        width: 100%;
+        height: 70%;
+        object-fit: cover;
+        border-radius:30px;
+        border: 1px solid gray;
+    }
+    & p{
+        font-size:20px;
+        margin-top: 15px;
+    }
+    &:hover{
+        cursor: pointer;
+        & p{
+            color:$globalColor;
+            font-weight:bold;
+        }
+    }
+}
+.winter{
+    padding: 50px 0;
+    text-align: center;
+    & h2{
+        font-size: 50px;
+        font-weight: bold;
+    }
+    & p{
+        font-size: 20px;
+        color:gray;
+    }
+}
