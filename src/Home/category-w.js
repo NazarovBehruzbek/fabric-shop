@@ -3,7 +3,7 @@ import React from 'react'
 import "./category.scss"
 import image from "../images/winter/winter4.jpg"
 
-export default function Category() {
+export default function CategoryW() {
   return (
     <div className='container'>
         <div className='category'>

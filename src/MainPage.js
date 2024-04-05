@@ -1,12 +1,16 @@
 import React from "react";
 import Home from './Home/Home';
-import Category from "./Home/category";
 import Winter from "./Home/winter";
+import CategoryW from "./Home/category-w";
+import CategoryS from "./Home/category-s";
+import Spring from "./Home/spring";
 const MainPage = () => {
     return ( <>
     <Home/>
-    <Category/>
+    <CategoryW/>
     <Winter/>
+    <CategoryS/>
+    <Spring/>
     </> );
 }
  

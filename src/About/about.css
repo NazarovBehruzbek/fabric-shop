@@ -1,0 +1,16 @@
+.about-us{
+    margin-top: 150px;
+    & h2{
+        font-size: 45px;
+        font-weight:bold;
+    }
+    & p{
+        font-size: 15px;
+        margin-top: 15px;
+        width: 90%;
+        line-height: 30px;
+    }
+}
+.about-img{
+    width: 100%;
+}

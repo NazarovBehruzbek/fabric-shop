@@ -5,9 +5,16 @@ $globalColor: #D09324;
     height: 300px;
     border-radius: 20px;
     padding: 30px 50px;
+    transition: 0.3s ease;
     & img{
         width: 80%;
     }
+    &:hover {
+        box-shadow: 10px 15px 15px #C89E9E;
+    }
+}
+.category-s{
+    background-color:#2E7571
 }
 .category-info{
     color: white;
