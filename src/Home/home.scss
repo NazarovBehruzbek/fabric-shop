@@ -1,6 +1,6 @@
 $globalColor: #D09324;
 .home {
-    margin-top: 30px;
+    margin-top: 50px;
     height: 100vh;
 }
 
@@ -12,7 +12,7 @@ $globalColor: #D09324;
 
 .swiper {
     width: 100%;
-    height: 95%;
+    height: 100%;
 }
 
 .swiper-slide {
@@ -35,6 +35,7 @@ $globalColor: #D09324;
     width: 100%;
     height: 560px;
     position: relative;
+    border-radius: 30px;
 }
 
 .slider-item1 {
