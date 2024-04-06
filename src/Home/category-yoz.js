@@ -1,14 +1,14 @@
 import { Col, Row } from 'antd'
 import React from 'react'
 import "./category.scss"
-import image from "../images/winter/kuz.png"
+import image from "../images/winter/yoz.png"
 
-export default function CategoryS() {
+export default function CategoryYoz () {
   return (
     <div className='container'>
-        <div className='category category-s'>
+        <div className='category category-yoz '>
             <Row>
-                <Col lg={5}>
+                <Col lg={5} >
                   <div className='category-info'>
                   <p>100%</p>
                     <span>Material quality</span>

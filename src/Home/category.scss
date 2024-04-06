@@ -4,16 +4,21 @@ $globalColor: #D09324;
     width: 100%;
     border-radius: 20px;
     padding: 30px 50px;
+    padding-bottom: 0;
     transition: 0.3s ease;
     &:hover {
         box-shadow: 10px 15px 15px #C89E9E;
     }
 }
 .cat-img{
-       width: 80%;
+       width: 100%;
+       height: 100%;
 }
 .category-s{
-    background-color:#2E7571
+    background-color:#5F5383
+}
+.category-yoz{
+    background-color:#2E7874;
 }
 .category-info{
     color: white;

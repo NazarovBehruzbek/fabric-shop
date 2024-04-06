@@ -2,7 +2,6 @@ const winterData = [
     {
         id: 1,
         nameUz: "Geometriya ko'k",
-        nameRu: "Геометрия синий",
         nameEn: "Geometry blue",
         img: require('../images/winter/winter1.jpg'),
         price:3000
@@ -10,7 +9,6 @@ const winterData = [
     {
         id: 2,
         nameUz: "Kvadratchalar",
-        nameRu: "Квадратчики",
         nameEn: "Square",
         img: require('../images/winter/winter2.jpg'),
         price:500
@@ -18,7 +16,6 @@ const winterData = [
     {
         id: 3,
         nameUz: "Davralar",
-        nameRu: "Дворалар",
         nameEn: "Triangles",
         img: require('../images/winter/winter3.jpg'),
         price:1600
@@ -26,7 +23,6 @@ const winterData = [
     {
         id: 4,
         nameUz: "Ikat",
-        nameRu: "Икат",
         nameEn: "Diamond",
         img: require('../images/winter/winter4.jpg'),
         price:200
@@ -34,7 +30,6 @@ const winterData = [
     {
         id: 5,
         nameUz: "Kechki bog'",
-        nameRu: "Кечки бог",
         nameEn: "Heart",
         img: require('../images/winter/winter5.jpg'),
         price:1500
@@ -42,7 +37,6 @@ const winterData = [
     {
         id: 6,
         nameUz: "Tropik barglar",
-        nameRu: "Тропик барглар",
         nameEn: "Star",
         img: require('../images/winter/winter6.jpg'),
         price:900
@@ -50,7 +44,6 @@ const winterData = [
     {
         id: 7,
         nameUz: "Lavanda atirgullari",
-        nameRu: "Лаванды атиргуллар",
         nameEn: "Lavanda",
         img: require('../images/winter/winter7.jpg'),
         price:1300
@@ -58,7 +51,6 @@ const winterData = [
     {
         id: 8,
         nameUz: "Vizantiya",
-        nameRu: "Византия",
         nameEn: "Vizantiya",
         img: require('../images/winter/winter8.jpg'),
         price:600
@@ -66,7 +58,6 @@ const winterData = [
     {
         id: 9,
         nameUz: "Bambi",
-        nameRu: "Бамби",
         nameEn: "Bambi",
         img: require('../images/winter/winter9.jpg'),
         price:700
@@ -74,11 +65,45 @@ const winterData = [
     {
         id: 10,
         nameUz: "Pat Markiz",
-        nameRu: "Пат маркиз",
         nameEn: "Pat Markiz",
         img: require('../images/winter/winter10.jpg'),
         price:1100
-    }
+    },
+    {
+        id: 11,
+        nameUz: "Safari",
+        nameEn: "Safari",
+        img: require('../images/winter/safari.jpg'),
+        price:145
+    },
+    {
+        id: 12,
+        nameUz: "Zumrad",
+        nameEn: "Zumrad",
+        img: require('../images/winter/zumrad.jpg'),
+        price:5000
+    },
+    {
+        id: 13,
+        nameUz: "Sakura",
+        nameEn: "Sakura",
+        img: require('../images/winter/sakura.jpg'),
+        price:235
+    },
+    {
+        id: 14,
+        nameUz: "Bolalar uchun",
+        nameEn: "Babay",
+        img: require('../images/winter/qoydolli.jpg'),
+        price:578
+    },
+    {
+        id: 15,
+        nameUz: "Zaytun",
+        nameEn: "Zaytun",
+        img: require('../images/winter/zaytun.jpg'),
+        price:235
+    },
 ];
 
 export default winterData;
