@@ -7,8 +7,11 @@ $globalColor: #D09324;
     left: 0;
     z-index: 1000;
     background-color: white;
-    border-bottom: 1px solid gray;
 }
+.nav.scrolled {
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.7);
+}
+
 .nav-list {
     display: flex;
     align-items: center;

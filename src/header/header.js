@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import "./header.scss"
 import logo from "../images/logo.png"
@@ -8,7 +8,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 function Header() {
     const [open, setOpen] = useState(false);
-
+    const [scrolled, setScrolled] = useState(false);
     const showDrawer = () => {
         setOpen(true);
     };
@@ -16,9 +16,23 @@ function Header() {
     const onClose = () => {
         setOpen(false);
     };
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 40) {
+                setScrolled(true);
+            } else {
+                setScrolled(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
     return (
         <section>
-            <div className="nav">
+            <div className={`nav ${scrolled ? 'scrolled' : ''}`}>
                 <div className="container">
                     <ul className="nav-list" >
                         <li className="nav-item nav-logo">
