@@ -5,7 +5,7 @@ const winterData = [
         nameRu: "Геометрия синий",
         nameEn: "Geometry blue",
         img: require('../images/winter/winter1.jpg'),
-        description: "Blue kajs",
+        price:3000
     },
     {
         id: 2,
@@ -13,7 +13,7 @@ const winterData = [
         nameRu: "Квадратчики",
         nameEn: "Square",
         img: require('../images/winter/winter2.jpg'),
-        description: "Square",
+        price:500
     },
     {
         id: 3,
@@ -21,7 +21,7 @@ const winterData = [
         nameRu: "Дворалар",
         nameEn: "Triangles",
         img: require('../images/winter/winter3.jpg'),
-        description: "Triangles",
+        price:1600
     },
     {
         id: 4,
@@ -29,7 +29,7 @@ const winterData = [
         nameRu: "Икат",
         nameEn: "Diamond",
         img: require('../images/winter/winter4.jpg'),
-        description: "Diamond",
+        price:200
     },
     {
         id: 5,
@@ -37,7 +37,7 @@ const winterData = [
         nameRu: "Кечки бог",
         nameEn: "Heart",
         img: require('../images/winter/winter5.jpg'),
-        description: "Heart",
+        price:1500
     },
     {
         id: 6,
@@ -45,7 +45,7 @@ const winterData = [
         nameRu: "Тропик барглар",
         nameEn: "Star",
         img: require('../images/winter/winter6.jpg'),
-        description: "Star",
+        price:900
     },
     {
         id: 7,
@@ -53,7 +53,7 @@ const winterData = [
         nameRu: "Лаванды атиргуллар",
         nameEn: "Lavanda",
         img: require('../images/winter/winter7.jpg'),
-        description: "Lavanda",
+        price:1300
     },
     {
         id: 8,
@@ -61,7 +61,7 @@ const winterData = [
         nameRu: "Византия",
         nameEn: "Vizantiya",
         img: require('../images/winter/winter8.jpg'),
-        description: "Vizantiya",
+        price:600
     },
     {
         id: 9,
@@ -69,7 +69,7 @@ const winterData = [
         nameRu: "Бамби",
         nameEn: "Bambi",
         img: require('../images/winter/winter9.jpg'),
-        description: "Bambi",
+        price:700
     },
     {
         id: 10,
@@ -77,7 +77,7 @@ const winterData = [
         nameRu: "Пат маркиз",
         nameEn: "Pat Markiz",
         img: require('../images/winter/winter10.jpg'),
-        description: "Pat Markiz",
+        price:1100
     }
 ];
 

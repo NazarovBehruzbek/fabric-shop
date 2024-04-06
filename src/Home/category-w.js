@@ -8,16 +8,16 @@ export default function CategoryW() {
     <div className='container'>
         <div className='category'>
             <Row>
-                <Col lg={6}>
+                <Col lg={7} >
                   <div className='category-info'>
                   <p>100%</p>
                     <span>Material quality</span>
                   </div>
                 </Col>
                 <Col lg={8}>
-                <img src={image} alt="Error" />
+                <img className='cat-img' src={image} alt="Error" />
                 </Col>
-                <Col lg={10}>
+                <Col lg={9}>
                    <div className='category-info2'>
                    <h2>'Tashkent Natural product'</h2>
                     <p> has been a company that produces cotton fabrics for use all over the world for many years</p>

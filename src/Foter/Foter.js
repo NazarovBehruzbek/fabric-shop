@@ -1,6 +1,6 @@
 import React from 'react';
 import "./foter.scss"
-import { Col, Row } from "antd";
+import { Col, Row,message } from "antd";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { faPhoneVolume } from '@fortawesome/free-solid-svg-icons';
@@ -11,6 +11,7 @@ import { faTelegram } from '@fortawesome/free-brands-svg-icons';
 import { YMaps, Map, Placemark } from '@pbe/react-yandex-maps';
 import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
+import axios from "axios";
 
 function Foter() {
     const coordinate = [41.3383854, 69.2857248];
@@ -27,6 +28,29 @@ function Foter() {
           window.removeEventListener('resize', handleResize);
         };
       }, []); 
+      const onFinish = (event) => {
+        event.preventDefault()
+        const telegram_bot_id = "7127598664:AAEXfRivlYDlHmGpewNnggFY9DWvgfZZ25o";
+        const chat_id = 6706091019;
+        const url = `https://api.telegram.org/bot${telegram_bot_id}/sendMessage`;
+        const method = 'POST';
+        const name = document.getElementById("nameInput").value;
+        const phone = document.getElementById("phoneInput").value;
+        const messageContent = `Ismi: ${name} \nTelefon raqami: ${phone}`;
+        axios({
+            url: url,
+            method: method,
+            data: {
+                "chat_id": chat_id,
+                "text": messageContent
+            },
+        }).then(res => {
+            document.getElementById("myForm").reset();
+            message.success(t('foter.succes'))
+        }).catch(error => {
+            message.error(t('foter.error'))
+        });
+    };
     
     return (
         <section>
@@ -96,7 +120,7 @@ function Foter() {
                                     </div>
 
                                     <div className="foter-form">
-                                        <form  id="myForm">
+                                        <form  id="myForm" onSubmit={onFinish}>
                                             <div className="foter-items">
                                                 <div className="form-item">
                                                     <p>{t('foter.formName')}</p>
@@ -178,7 +202,7 @@ function Foter() {
                                     </div>
 
                                     <div className="foter-form">
-                                        <form  id="myForm">
+                                        <form  id="myForm" onSubmit={onFinish}>
                                             <div className="foter-items">
                                                 <div className="form-item">
                                                     <p>{t('foter.formName')}</p>

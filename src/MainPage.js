@@ -4,6 +4,7 @@ import Winter from "./Home/winter";
 import CategoryW from "./Home/category-w";
 import CategoryS from "./Home/category-s";
 import Spring from "./Home/spring";
+import NewsPage from "./News/News";
 const MainPage = () => {
     return ( <>
     <Home/>
@@ -11,6 +12,7 @@ const MainPage = () => {
     <Winter/>
     <CategoryS/>
     <Spring/>
+    <NewsPage/>
     </> );
 }
  

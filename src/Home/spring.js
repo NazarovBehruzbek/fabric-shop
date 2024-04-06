@@ -24,8 +24,7 @@ export default function Spring (){
                     return(
                         <div className="card" key={index} onClick={()=>handleClick(item.id)}> 
                             <img src={item.img} alt={item.name}/>
-                            <h3>{item.name}</h3>
-                            <p>{item.description}</p>
+                            <h3>{item.nameEn}</h3>
                         </div>
                     )
                 })

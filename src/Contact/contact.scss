@@ -1,6 +1,6 @@
 .contact{
     margin-top: 110px;
-    padding: 50px;
+    margin-bottom: 100px;
     & h2{
         font-size: 30px;
         font-weight: bold;
@@ -18,7 +18,9 @@
     width: 100%;
     height: 100%;
   }
-  .form-contact{
+  .form-contact-c{
+    position: relative;
+    width: 90%;
     & Input{
         background-color:#EFEFEF;
         height: 50px;
@@ -39,6 +41,20 @@
         background-color:#EFEFEF;
     }
    }
+  }
+  .send-request-c{
+    position: absolute;
+    right: 0px;
 
   }
- 
+  @media screen and (max-width:992px) {
+    .container{
+        .map-container-c{
+         display: none;
+        }
+        .form-contact-c{
+            width: 100%;
+        }
+    }
+    
+}

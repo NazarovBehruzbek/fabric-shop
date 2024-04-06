@@ -8,9 +8,10 @@ import Products from './Product/prodects';
 import Header from './header/header';
 import Foter from './Foter/Foter';
 import Contacts from './Contact/Contact';
+import NewsCategory from './NewsCategory/NewsCategory';
 
 function App() {
-  const { id } = useSharedStore(); 
+  const { id, newsId } = useSharedStore(); 
   return (
     <>
       <Routes>
@@ -19,6 +20,7 @@ function App() {
         <Route path="/collection" element={<Collection />} />
         <Route path="/contact" element={<Contacts />} />
         <Route path={`/product/${id}`} element={<Products />} />
+        <Route path={`/news/${newsId}`} element={<NewsCategory/>} />
       </Routes>
       <Header />
       <Foter />

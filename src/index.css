@@ -5,10 +5,10 @@
 }
 .container {
   position: relative;
-  max-width: 1350px;
-  width: 100%;
+  width: 95%;
   margin: 0 auto;
+  max-width: 1400px;
 }
 .active{
-  color: #D09324;
+  color: #D09324 !important;
 }

@@ -61,6 +61,39 @@ $globalColor: #D09324;
    width: 200px;
    height:90px;
   }
-
-
+#languageSelect{
+    width: 100px;
+    height: 25px;
+    position: absolute;
+    right: 100px;
+    top: 30px;
+}
+.bars{
+    position: absolute;
+    top: 32px;
+    right: 60px;
+    font-size: 20px;
+    display: none;
+}
+@media screen and (max-width:914px ) {
+    .nav-item{
+        display: none;
+    }
+    .nav-logo{
+        display: block;
+    }
+    .bars{
+        display: block;
+    }
+    .sub-menu{
+        .nav-list{
+            display: block;
+        }
+        .nav-item{
+            display: block;
+            padding: 10px;
+        }
+    }
+    
+}
  

@@ -1,16 +1,36 @@
 .about-us{
-    margin-top: 150px;
+    margin-top: 80px;
+    margin-bottom: 50px;
     & h2{
         font-size: 45px;
         font-weight:bold;
+        text-align: center;
+        padding: 30px;
     }
     & p{
         font-size: 15px;
         margin-top: 15px;
         width: 90%;
         line-height: 30px;
+        margin: 0 auto;
     }
 }
 .about-img{
     width: 100%;
+}
+@media screen and (max-width:547px) {
+    .about-us{
+        & h2{
+            font-size: 25px;
+            font-weight:bold;
+            padding: 30px;
+        }
+        & p{
+            font-size: 12px;
+            margin-top: 25px;
+            width: 100%;
+            line-height: 20px;
+        }
+    }   
+    
 }

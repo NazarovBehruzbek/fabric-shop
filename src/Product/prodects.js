@@ -1,14 +1,38 @@
-import { Col, Row, Tabs, Rate, Form, Input, Button } from "antd";
+import { Col, Row, Tabs, Rate, Form, Input,message } from "antd";
 import React, { useEffect, useState } from "react";
+import axios from 'axios';
 import "./products.scss";
-import Data from "../Data/Data";
+import Data  from "../Data/Data";
 import useSharedStore from "../Store/store";
 const { TextArea } = Input;
 const Products = () => {
     const { id } = useSharedStore();
     const [products, setProducts] = useState([]);
     const { TabPane } = Tabs;
-
+    const [form]= Form.useForm()
+    const onFinish = (values) => {
+        const telegram_bot_id = "7127598664:AAEXfRivlYDlHmGpewNnggFY9DWvgfZZ25o";
+        const chat_id = 6706091019;
+        const url = `https://api.telegram.org/bot${telegram_bot_id}/sendMessage`;
+        const method = 'POST';
+        const name = values.username;
+        const phone = values.surname;
+        const feedback = values.feedback;
+        const messageContent = `Ismi: ${name} \nTelefon raqami: ${phone}  \nTelefon raqami: ${feedback}`;
+        axios({
+            url: url,
+            method: method,
+            data: {
+                "chat_id": chat_id,
+                "text": messageContent
+            },
+        }).then(res => {
+            message.success('Muvaffaqiyatli yuborildi')
+            form.resetFields();
+        }).catch(error => {
+            message.error('Yuborishda xatolik')
+        });
+    };
     useEffect(() => {
         const filteredProducts = Data.filter(item => item.id === id);
         setProducts(filteredProducts);
@@ -66,8 +90,8 @@ const Products = () => {
                             return (<div className="description">
                                 <h2>Description</h2>
                                 <div key={index}>
-                                    <h3>{item.nameEn}</h3>
-                                    <p>{item.description}</p>
+                                    <h3>Bed linen set {item.nameEn}</h3>
+                                    <p>Bed linen is a household item and bedroom decor designed for comfort and beauty. You can choose from a variety of bed sets that include sheets, blankets, pillow crafts and other accessories. They have various designs, prints, embroideries or other design elements. They are easy and quick to clean and clean. They are made from soft materials and they make your bedrooms cozy and cozy.</p>
                                 </div>
                             </div>
 
@@ -91,6 +115,8 @@ const Products = () => {
                                     initialValues={{ remember: true, }}
                                     autoComplete="off"
                                     layout="vertical"
+                                    form={form}
+                                    onFinish={onFinish}
                                 >
                                     <Form.Item
                                         label="Name"
@@ -107,7 +133,7 @@ const Products = () => {
                                     </Form.Item>
                                     <Form.Item
                                         label="Family"
-                                        name="username"
+                                        name="surname"
                                         rules={[
                                             {
                                                 required: true,
@@ -119,7 +145,7 @@ const Products = () => {
                                         <Input style={{ height: '40px', borderColor: 'gray' }} />
                                     </Form.Item>
                                     
-                                    <Form.Item label="Feedback"  name="Feedback"
+                                    <Form.Item label="Feedback"  name="feedback"
                                       rules={[{ required: true, message: 'Please input your fadbeck!' }]}
                                     >
                                         <TextArea rows={4} style={{ borderColor: 'gray' }} />
@@ -150,8 +176,7 @@ const Products = () => {
                                 return (
                                     <div className="card" key={index} >
                                         <img src={item.img} alt={item.name} />
-                                        <h3>{item.name}</h3>
-                                        <p>{item.description}</p>
+                                        <h3>{item.nameEn}</h3>
                                     </div>
                                 )
                             })

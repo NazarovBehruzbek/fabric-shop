@@ -2,16 +2,15 @@ $globalColor: #D09324;
 .category{
     background-color:#616884;
     width: 100%;
-    height: 300px;
     border-radius: 20px;
     padding: 30px 50px;
     transition: 0.3s ease;
-    & img{
-        width: 80%;
-    }
     &:hover {
         box-shadow: 10px 15px 15px #C89E9E;
     }
+}
+.cat-img{
+       width: 80%;
 }
 .category-s{
     background-color:#2E7571
@@ -53,4 +52,58 @@ $globalColor: #D09324;
         color:white;
     }
 }
+}
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    .category-info {
+        color: white;
+
+        & p {
+            font-weight: bold;
+            font-size: 60px !important;
+        }
+
+        & span {
+            font-size: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .category {
+        .cat-img {
+            display: none !important;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .category-info {
+        color: white;
+
+        & p {
+            font-weight: bold;
+            font-size: 60px !important;
+        }
+
+        & span {
+            font-size: 20px;
+        }
+    }
+    .category-info2{
+        color: white;
+    & h2{
+        font-weight: bold;
+        font-size:25px;
+        margin-top: 20px;
+    }
+    & p{
+        font-size: 15px;
+        width: 100%;
+        padding: 20px 0;
+    }
+    & button{
+        margin-top: 10px;
+    }
+    }
+    
 }

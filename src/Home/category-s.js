@@ -15,7 +15,7 @@ export default function CategoryS() {
                   </div>
                 </Col>
                 <Col lg={8}>
-                <img src={image} alt="Error" />
+                <img className='cat-img' src={image} alt="Error" />
                 </Col>
                 <Col lg={10}>
                    <div className='category-info2'>

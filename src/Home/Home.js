@@ -53,7 +53,7 @@ function Home() {
             <div className="anons">
                    <div className="container">
                    <Row>
-                        <Col lg={6}>
+                        <Col lg={6} md={8} sm={12} xs={24}>
                             <div className="anons-item">
                                 <img src={avto} alt="Error" />
                                 <div className="info">
@@ -62,7 +62,7 @@ function Home() {
                                 </div>
                             </div>
                         </Col>
-                        <Col lg={6}>
+                        <Col lg={6} md={8} sm={12} xs={24}>
                         <div className="anons-item">
                                 <img src={retur} alt="Error" />
                                 <div className="info">
@@ -71,7 +71,7 @@ function Home() {
                                 </div>
                             </div>
                         </Col>
-                        <Col lg={6}>
+                        <Col lg={6} md={8} sm={12} xs={24}>
                         <div className="anons-item">
                                 <img src={naush} alt="Error" />
                                 <div className="info">
@@ -80,7 +80,7 @@ function Home() {
                                 </div>
                             </div>
                         </Col>
-                        <Col lg={6}>
+                        <Col lg={6} md={8} sm={12} xs={24}>
                         <div className="anons-item">
                                 <img src={payment} alt="Error" />
                                 <div className="info">
