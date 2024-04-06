@@ -1,0 +1,44 @@
+.contact{
+    margin-top: 110px;
+    padding: 50px;
+    & h2{
+        font-size: 30px;
+        font-weight: bold;
+    }
+}
+.map-container-c {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ccc;
+    border: none;
+    display: flex;
+  }
+  
+  .map-c {
+    width: 100%;
+    height: 100%;
+  }
+  .form-contact{
+    & Input{
+        background-color:#EFEFEF;
+        height: 50px;
+        border-color: gray;
+        border-radius:20px;
+        outline: none !important;
+        &:hover{
+            background-color:#EFEFEF;
+        }
+
+    }
+   & TextArea{
+    background-color:#EFEFEF;
+    border-color: gray;
+    border-radius:20px;
+    outline: none !important;
+    &:hover{
+        background-color:#EFEFEF;
+    }
+   }
+
+  }
+ 

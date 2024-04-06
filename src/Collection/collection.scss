@@ -1,8 +1,18 @@
+$globalColor: #D09324;
 .collection{
-    margin-top: 150px;
+    margin-top: 100px;
+    padding: 50px;
 }
 .page-items{
     position: relative;
+    & h2{
+        font-size: 30px;
+        font-weight: bold;
+    }
+    & p{
+        padding-top: 10px;
+        padding-bottom: 40px;
+    }
 }
 .product{
     position: absolute;
@@ -21,6 +31,9 @@
         padding: 5px;
         font-size:15px;
         color:gray;
+        &:hover{
+            color:$globalColor;
+        }
     }
 }
 .search-item{
@@ -66,3 +79,44 @@
     right: 30px;
     top: 5px;
 }
+.wrapper-c{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr ));
+    gap: 20px;
+}
+.card-c{
+    width: 100%;
+    height: 100%;
+    & img{
+        width: 100%;
+        height: 80%;
+        object-fit: cover;
+        border-radius:30px;
+        border: 1px solid gray;
+    }
+    & p{
+        font-size:20px;
+        margin-top: 15px;
+    }
+    &:hover{
+        cursor: pointer;
+        & p{
+            color:$globalColor;
+            font-weight:bold;
+        }
+    }
+}
+.ant-pagination-item{
+    border-color: black !important;
+} 
+.ant-pagination-item-active{
+    background-color:$globalColor !important;
+    color: white !important;
+        & a{
+            color: white !important;
+        }
+
+}
+// .active{
+//     color: $globalColor;
+// }

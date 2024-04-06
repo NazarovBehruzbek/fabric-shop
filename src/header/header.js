@@ -8,27 +8,33 @@ function Header() {
 
     return (
         <section>
-           <div className="nav">
-    <div className="container">
-        <ul className="nav-list" >
-            <li className="nav-item">
-                <img src={logo} alt="Error" className="logo" />
-            </li>
-            <li className="nav-item ">
-                <NavLink exact to="/" activeClassName="active">Home</NavLink>
-            </li>
-            <li className="nav-item">
-                <NavLink to="/about" activeClassName="active">About</NavLink>
-            </li>
-            <li className="nav-item">
-                <NavLink to="/collection" activeClassName="active">Collection</NavLink>
-            </li>
-            <li className="nav-item">
-                <NavLink to="/contact" activeClassName="active">Contact</NavLink>
-            </li>
-        </ul>
-    </div>
-</div>
+            <div className="nav">
+                <div className="container">
+                    <ul className="nav-list" >
+                        <li className="nav-item">
+                            <img src={logo} alt="Error" className="logo" />
+                        </li>
+                        <li className="nav-item ">
+                            <NavLink exact to="/" activeClassName="active">Home</NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink to="/about" activeClassName="active">About</NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink to="/collection" activeClassName="active">Collection</NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink to="/contact" activeClassName="active">Contact</NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <select id="languageSelect">
+                                <option value="uzbek">Uzbek </option>
+                                <option value="english">English</option>
+                            </select>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </section>
     );
 }
