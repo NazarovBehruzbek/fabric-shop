@@ -1,12 +1,12 @@
 import React from "react";
-import { Row, Col,Form,Input,message } from 'antd';
-import { YMaps, Map, Placemark} from '@pbe/react-yandex-maps';
+import { Row, Col, Form, Input, message } from 'antd';
+import { YMaps, Map, Placemark } from '@pbe/react-yandex-maps';
 import axios from 'axios'
 import "./contact.scss"
 const { TextArea } = Input;
 function Contacts() {
     const coordinate = [41.3383854, 69.2857248];
-    const [form]= Form.useForm()
+    const [form] = Form.useForm()
     const onFinish = (values) => {
         const telegram_bot_id = "7127598664:AAEXfRivlYDlHmGpewNnggFY9DWvgfZZ25o";
         const chat_id = 6706091019;
@@ -30,14 +30,14 @@ function Contacts() {
             message.error('Yuborishda xatolik')
         });
     };
-    return(
+    return (
         <>
-        <div className="contact">
-            <div className="container">
-                <Row>
-                    <Col lg={12} md={24} sm={24} xs={24}>
-                        <h2>Contact</h2>
-                        <div className="form-contact-c">
+            <div className="contact">
+                <div className="container">
+                    <Row>
+                        <Col lg={12} md={24} sm={24} xs={24}>
+                            <h2>Contact</h2>
+                            <div className="form-contact-c">
                                 <Form
                                     name="basic"
                                     labelCol={{ span: 8 }}
@@ -68,19 +68,18 @@ function Contacts() {
                                                 message: 'Please input your Phone Number!',
                                             },
                                         ]}
-                                       
+
                                     >
-                                        <Input  placeholder="Phone Number"/>
+                                        <Input placeholder="Phone Number" />
                                     </Form.Item>
-                                    
-                                    <Form.Item   name="feedback"
-                                      rules={[{ required: true, message: 'Please input your fadbeck!' }]}
+
+                                    <Form.Item name="feedback"
+                                        rules={[{ required: true, message: 'Please input your fadbeck!' }]}
                                     >
-                                        <TextArea rows={8} placeholder="Your Message Here"/>
+                                        <TextArea rows={8} placeholder="Your Message Here" />
                                     </Form.Item>
                                     <Form.Item
                                         className="send-request-c"
-
                                     >
                                         <button type="primary" htmlType="submit" className="send-request">
                                             Submit
@@ -88,23 +87,23 @@ function Contacts() {
                                     </Form.Item>
                                 </Form>
                             </div>
-                    </Col>
-                    <Col lg={12} md={24} sm={24} xs={24}>
-                    <YMaps className="c-map">
-                                    <div className="map-container-c">
-                                        <Map
-                                            defaultState={{ center: [41.3383854, 69.2857248], zoom: 16 }}
-                                            className="map-c"
-                                        >
-                                            <Placemark geometry={coordinate} options={{ iconColor: '#F35825' }} />
-                                        </Map>
-                                    </div>
-                                </YMaps>
-                    </Col>
-                </Row>
+                        </Col>
+                        <Col lg={12} md={24} sm={24} xs={24}>
+                            <YMaps className="c-map">
+                                <div className="map-container-c">
+                                    <Map
+                                        defaultState={{ center: [41.3383854, 69.2857248], zoom: 16 }}
+                                        className="map-c"
+                                    >
+                                        <Placemark geometry={coordinate} options={{ iconColor: '#F35825' }} />
+                                    </Map>
+                                </div>
+                            </YMaps>
+                        </Col>
+                    </Row>
 
+                </div>
             </div>
-        </div>
         </>
     )
 }

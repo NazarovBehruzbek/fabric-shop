@@ -37,7 +37,7 @@ $globalColor: #D09324;
         padding: 15px;
       }
     & table {
-        width: 70%;
+        width: 100%;
         border-collapse: collapse;
         margin-top: 30px;
       }  
@@ -52,6 +52,15 @@ $globalColor: #D09324;
         text-decoration: none;
         color: red
       }
+}
+.revrewiev-in{
+width: 90%;
+}
+@media screen and (max-width:992px) {
+  .category-table{
+    margin: 0;
+  }
+  
 }
 
 .custom-tabs {

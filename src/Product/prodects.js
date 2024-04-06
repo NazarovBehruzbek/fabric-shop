@@ -43,12 +43,12 @@ const Products = () => {
             <div className="container">
                 {products.map((item, index) => (
                     <Row gutter={[16, 16]}>
-                        <Col key={index} lg={12} md={24}>
+                        <Col key={index} lg={12} md={24} sm={24} xs={24}>
                             <div className="image-container">
                                 <img src={item.img} alt={item.name} />
                             </div>
                         </Col>
-                        <Col lg={12} md={24}>
+                        <Col lg={12} md={24} sm={24} xs={24}>
                             <div className="category-table">
                                 <h2>{item.nameEn}</h2>
                                 <table>
@@ -118,20 +118,25 @@ const Products = () => {
                                     form={form}
                                     onFinish={onFinish}
                                 >
-                                    <Form.Item
+                                    <Row>
+                                        <Col lg={12} md={24} sm={24} xs={24}>
+                                        <Form.Item
                                         label="Name"
                                         name="username"
+                                        className="rewiev-in"
                                         rules={[
                                             {
                                                 required: true,
                                                 message: 'Please input your username!',
                                             },
                                         ]}
-                                        style={{ display: 'inline-block', width: 'calc(50% - 15px)', marginRight: "30px" }}
+                                       
                                     >
-                                        <Input style={{ height: '40px', borderColor: 'gray' }} />
+                                        <Input style={{ height: '40px', borderColor: 'gray',width:'98%' }} />
                                     </Form.Item>
-                                    <Form.Item
+                                        </Col>
+                                        <Col lg={12} md={24} sm={24} xs={24}>
+                                        <Form.Item
                                         label="Family"
                                         name="surname"
                                         rules={[
@@ -140,23 +145,20 @@ const Products = () => {
                                                 message: 'Please input your Family!',
                                             },
                                         ]}
-                                        style={{ display: 'inline-block', width: 'calc(50% - 15px)' }}
+                                      
                                     >
-                                        <Input style={{ height: '40px', borderColor: 'gray' }} />
+                                        <Input style={{ height: '40px', borderColor: 'gray',width:'98%' }} />
                                     </Form.Item>
-                                    
+                                        </Col>
+                                    </Row>
+                                  
                                     <Form.Item label="Feedback"  name="feedback"
                                       rules={[{ required: true, message: 'Please input your fadbeck!' }]}
                                     >
                                         <TextArea rows={4} style={{ borderColor: 'gray' }} />
                                     </Form.Item>
                                     <Form.Item
-                                        wrapperCol={{
-                                            offset: 19,
-                                            span: 16,
-                                        }}
-
-                                    >
+                                                                  >
                                         <button type="primary" htmlType="submit" className="send-request">
                                             Submit
                                         </button>

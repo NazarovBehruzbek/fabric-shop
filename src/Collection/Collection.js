@@ -74,7 +74,7 @@ function Collection() {
         <>
             <div className="collection container">
                 <Row>
-                    <Col lg={5}>
+                    <Col lg={5} md={5} > 
                         <div className="search-item">
                             <input placeholder="Search here" />
                             <div className="icon"><FontAwesomeIcon className="icons" icon={faSearch} /></div>
@@ -110,7 +110,7 @@ function Collection() {
                             }
                         </div>
                     </Col>
-                    <Col lg={19}>
+                    <Col lg={19} md={19}>
                         <div className="page-items">
                             <h2>Collection</h2>
                             <p>Showing 1-{itemsPerPage} of {totalItems}</p>

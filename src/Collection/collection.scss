@@ -1,10 +1,12 @@
 $globalColor: #D09324;
 .collection{
     margin-top: 100px;
-    padding: 50px;
+    margin-bottom: 50px;
 }
 .page-items{
     position: relative;
+    width: 95%;
+    margin: 0 auto;
     & h2{
         font-size: 30px;
         font-weight: bold;
@@ -85,7 +87,7 @@ $globalColor: #D09324;
 }
 .wrapper-c{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr ));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr ));
     gap: 20px;
 }
 .card-c{
@@ -120,4 +122,20 @@ $globalColor: #D09324;
             color: white !important;
         }
 
+}
+@media screen and (max-width:870px) {
+    .options{
+        margin-left: 5px;
+    }
+    .page-items{
+        width: 100%;
+        & h2{
+            font-size: 25px;
+        }
+    }
+    .product{
+        width: 120px;
+        height: 30px;
+        top: 5px;
+    }
 }
