@@ -1,5 +1,89 @@
 {
-    "header":{
-        "menu1":"ASOSIY"
+    "header": {
+        "menu1": "BOSH SAHIFA",
+        "menu2": "BIZ HAQIMIZDA",
+        "menu3": "KOLLEKSIYA",
+        "menu4": "ALOQA"
+    },
+    "home": {
+        "title": "Pacetic Fabrikasida - 50% li aksiya, Shoyi  va boshqalar uchun",
+        "btn": "KOLLEKSIYA",
+        "card1": {
+            "title": "Yetkazib berish bepul",
+            "text": "Barcha buyurtmalarga yetkazib berish bepul"
+        },
+        "card2": {
+            "title": "Qaytarish kafolati",
+            "text": "30 kungacha pulni qaytarish imkoniyati"
+        },
+        "card3": {
+            "title": "Onlayn qo'llab-quvvatlash 24/7",
+            "text": "Texnik qo'llab-quvvatlash 24/7"
+        },
+        "card4": {
+            "title": "Xavfsiz to'lov",
+            "text": "Barcha to'lov usullari qabul qilinadi"
+        }
+    },
+    "category": {
+        "title1": "Material sifati",
+        "title2": "'Toshkent tabiiy mahsulot'",
+        "text": "Yillar davomida dunyoda ishlatiladigan paxta to'qimalarini ishlab chiqaruvchi kompaniya"
+    },
+    "winter": {
+        "titlew": "Qish kolleksiyasi",
+        "subtitle": "Toshkent tabiiy mahsulot",
+        "titles": "Bahor kolleksiyasi",
+        "titley": "Yoz kolleksiyasi"
+    },
+    "news": {
+        "title": "Yangiliklar",
+        "text": "Toshkent tabiiy mahsulot",
+        "card-title": "Qanday to'g'ri qurilmalar tanlash mumkin",
+        "card-text": "Go'zal vodiy atrofimni mayin ifor' bilan to'ldirganda va  quyoshi tepaliklarga ko'tarilganda ..."
+    },
+    "about": {
+        "title": "Toshkent tabiiy mahsulot",
+        "text1": "Ushbu kompaniya Toshkentda sifatli mahsulotlar ishlab chiqarishda juda muvaffaqiyatli bo'ldi. Ular paxta xammadanlari, sumkalar va boshqa hamkor mahsulotlar ishlab chiqarishda mutaxassislar. Kompaniya faoliyatida ekologik qarorlarni qabul qilib, ishlab chiqarish jarayonini toza va ekologik yo'l bilan amalga oshirishga harakat qiladi. Bu ularning ekologik muhim mahsulotlarni ishlab chiqarishdagi mas'uliyati haqida ularning ishonchini ko'rsatadi.",
+        "text2": "Kompaniya faoliyati davomida, ular mijoz talablari va takliflarini qo'llab-quvvatlaydi va turli xil paxta xammadanlarini taklif qiladi. Ular mijozlarga qiziqarli mahsulotlarni taklif etish, kompaniyani har xil turdagi mijozlarga qiziq qiladi."
+    },
+    "collection": {
+        "title": "Kolleksiya",
+        "search": "Bu yerda qidiruv",
+        "select": "Boshlang'ich tartib",
+        "option1": "Narxlarni oshirish",
+        "option2": "Narxlarni kamaytirish",
+        "show1": "Ko'rsatilgan 1",
+        "show2": "dan"
+    },
+    "product": {
+        "title": "Ta'rif",
+        "review": "Izohlarni o'qish (0)",
+        "d-title": "Yotoqxona to'plami",
+        "description": "Yotoqxona uy karavot vositasidir va yotoqxona dekoratsiyasi, qulaylik va go'zallik uchun dizayn qilindi. Siz chiqindi, o'rtacha, yotoqxona komplektlari, yotoqxona yorqinliklar, yostiqcha mahsulotlar va boshqa aksessuarlardan tanlash mumkin. Ular turli dizayn, chizma, nakshlar yoki boshqa dizayn elementlariga ega. Ular oson va tez yuvilishi mumkin. Ular yumshoq materiallardan ishlab chiqarilgan va sizning yotoqxonalaringizni qulay va qulay qilishadi.",
+        "reviews": "Izohlar",
+        "text": "Hali hech qanday izoh yo'q.",
+        "subtitle": "Birinchi bo'lib “Luxury”ni ko'rib chiqing",
+        "subtext": "Sizning elektron pochtangiz chop etilmaydi. Majburiy maydonlar * bilan belgilangan",
+        "mark": " Sizning belgiz",
+        "similar": "Oxirgi mahsulotlar"
+    },
+    "newsC": {
+        "text1": " Men yaxshi do'stim, mening qiyinchiliklarim uchun juda ko'pdir - men bu ko'rsatmalarining jimjitligi ostida boraman! Mening butun ongim bilan bahorning bu shirin kunlari kabi bu joyda mavjud bo'lgan hayotning zarafatini his qilaman. Men yolg'izman, va men bilan birga joylasgan bu joy, mening kabi ruhlar uchun yaratilgan.",
+        "text2": " Men juda xursandman, yaxshi dostim, juda sodda mavjudlikning zavqli hissiyotiga qaytarilganman, bu faqat yo'zg'an mavjudlikning ajoyib bahori kabi, mening butun yuragim bilan qizg'an. Men yolg'izman, va men bilan birga joylasgan bu joy, mening kabi ruhlar uchun yaratilgan.",
+        "text3": " Men juda xursandman, yaxshi dostim, juda sodda mavjudlikning zavqli hissiyotiga qaytarilganman, bu faqat yo'zg'an mavjudlikning ajoyib bahori kabi, mening butun yuragim bilan qizg'an. Men yolg'izman, va men bilan birga joylasgan bu joy, mening kabi ruhlar uchun yaratilgan.",
+        "text4": " Men yaxshi do'stim, mening qiyinchiliklarim uchun juda ko'pdir - men bu ko'rsatmalarining jimjitligi ostida boraman! Mening butun ongim bilan bahorning bu shirin kunlari kabi bu joyda mavjud bo'lgan hayotning zarafatini his qilaman. Men yolg'izman, va men bilan birga joylasgan bu joy, mening kabi ruhlar uchun yaratilgan."
+    },
+    "foter": {
+        "title": "Bog'lanish",
+        "addressT": "Manzil",
+        "address": "Uzbekistan, Tashkent, Alishera Navoiy nomidagi Oʻzbekiston milliy bogʻi",
+        "phone": "Telefon",
+        "work": "Ish vaqti",
+        "formName": "Ismingiz",
+        "pnumber": "Telefon raqam",
+        "send": "Yuborish",
+        "succes": "Muvaffaqiyatli yuborildi",
+        "error": "Xatolik"
     }
 }

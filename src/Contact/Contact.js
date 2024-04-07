@@ -3,10 +3,12 @@ import { Row, Col, Form, Input, message } from 'antd';
 import { YMaps, Map, Placemark } from '@pbe/react-yandex-maps';
 import axios from 'axios'
 import "./contact.scss"
+import { useTranslation } from "react-i18next";
 const { TextArea } = Input;
 function Contacts() {
     const coordinate = [41.3383854, 69.2857248];
     const [form] = Form.useForm()
+    const [t] = useTranslation();
     const onFinish = (values) => {
         const telegram_bot_id = "7127598664:AAEXfRivlYDlHmGpewNnggFY9DWvgfZZ25o";
         const chat_id = 6706091019;
@@ -24,10 +26,10 @@ function Contacts() {
                 "text": messageContent
             },
         }).then(res => {
-            message.success('Muvaffaqiyatli yuborildi')
+            message.success(t('foter.succes'))
             form.resetFields();
         }).catch(error => {
-            message.error('Yuborishda xatolik')
+            message.error(t('foter.error'))
         });
     };
     return (
@@ -82,7 +84,7 @@ function Contacts() {
                                         className="send-request-c"
                                     >
                                         <button type="primary" htmlType="submit" className="send-request">
-                                            Submit
+                                        {t('foter.send')}
                                         </button>
                                     </Form.Item>
                                 </Form>

@@ -3,10 +3,12 @@ import News from "../Data/News";
 import "./news.scss";
 import { useNavigate } from 'react-router-dom';
 import useSharedStore from "../Store/store";
+import { useTranslation } from "react-i18next";
 
 function NewsPage() {
     const navigate = useNavigate();
     const { setnewsId } = useSharedStore();
+    const [t] = useTranslation();
     const handleClick = (id) => {
         setnewsId(id);        
         navigate(`/news/${id}`);
@@ -15,16 +17,16 @@ function NewsPage() {
     return (
         <div className="news">
             <div className="container">
-                <h2>News</h2>
-                <p>Tashkent Natural Product</p>
+                <h2>{t('news.title')}</h2>
+                <p>{t('news.text')}</p>
                 <div className="wrapper-n">
                     {
                         News.map((item, index) => {
                             return (
                                 <div className="card-n" key={index} onClick={()=>handleClick(item.id)}>
                                     <img src={item.img} alt={item.name} />
-                                    <h3>How to choose perfect gadgets</h3>
-                                    <p>When, while the lovely valley teems with vapour around me, and the meridian sun strikes the upper s...</p>
+                                    <h3>{t('news.card-title')}</h3>
+                                    <p>{t('news.card-text')}</p>
                                 </div>
                             );
                         })

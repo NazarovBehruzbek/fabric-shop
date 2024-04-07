@@ -4,12 +4,14 @@ import axios from 'axios';
 import "./products.scss";
 import Data  from "../Data/Data";
 import useSharedStore from "../Store/store";
+import { useTranslation } from "react-i18next";
 const { TextArea } = Input;
 const Products = () => {
     const { id } = useSharedStore();
     const [products, setProducts] = useState([]);
     const { TabPane } = Tabs;
     const [form]= Form.useForm()
+    const [t] = useTranslation();
     const onFinish = (values) => {
         const telegram_bot_id = "7127598664:AAEXfRivlYDlHmGpewNnggFY9DWvgfZZ25o";
         const chat_id = 6706091019;
@@ -27,10 +29,10 @@ const Products = () => {
                 "text": messageContent
             },
         }).then(res => {
-            message.success('Muvaffaqiyatli yuborildi')
+            message.success(t('foter.succes'))
             form.resetFields();
         }).catch(error => {
-            message.error('Yuborishda xatolik')
+            message.error(t('foter.error'))
         });
     };
     useEffect(() => {
@@ -85,26 +87,26 @@ const Products = () => {
                 ))}
 
                 <Tabs centered={true} defaultActiveKey="1" className="custom-tabs" itemActiveColor="red">
-                    <TabPane tab="Description" key="1">{
+                    <TabPane tab={t('product.title')} key="1">{
                         products.map((item, index) => {
                             return (<div className="description">
-                                <h2>Description</h2>
+                                <h2>{t('product.title')}</h2>
                                 <div key={index}>
-                                    <h3>Bed linen set {item.nameEn}</h3>
-                                    <p>Bed linen is a household item and bedroom decor designed for comfort and beauty. You can choose from a variety of bed sets that include sheets, blankets, pillow crafts and other accessories. They have various designs, prints, embroideries or other design elements. They are easy and quick to clean and clean. They are made from soft materials and they make your bedrooms cozy and cozy.</p>
+                                    <h3>{t('product.d-title')} {item.nameEn}</h3>
+                                    <p>{t('product.description')}</p>
                                 </div>
                             </div>
 
                             )
                         })
                     }</TabPane>
-                    <TabPane tab="Reviews (0)" key="2">
+                    <TabPane tab={t('product.review')} key="2">
                         <div className="review">
-                            <h2>Reviews</h2>
-                            <p>There are no reviews yet.</p>
-                            <h2>Be the first to review “Luxury”</h2>
-                            <p>Your email address will not be published. Required fields are marked *</p>
-                            <span style={{ fontWeight: 'bold' }}>Your mark  *</span>
+                            <h2>{t('product.reviews')}</h2>
+                            <p>{t('product.text')}</p>
+                            <h2>{t('product.subtitle')}</h2>
+                            <p>{t('product.subtext')}</p>
+                            <span style={{ fontWeight: 'bold' }}>{t('product.mark')}  *</span>
                             <span>  <Rate className="rate-item" style={{ borderColor: 'red' }} /></span>
                             <div className="form">
                                 <Form
@@ -160,7 +162,7 @@ const Products = () => {
                                     <Form.Item
                                                                   >
                                         <button type="primary" htmlType="submit" className="send-request">
-                                            Submit
+                                            {t('foter.send')}
                                         </button>
                                     </Form.Item>
                                 </Form>
@@ -171,7 +173,7 @@ const Products = () => {
                 </Tabs>
 
                 <div className="similar">
-                    <h2>Similar products</h2>
+                    <h2>{t('product.similar')}</h2>
                     <div className="wrapper">
                         {
                             Data.slice(0, 4).map((item, index) => {

@@ -50,13 +50,13 @@ function Header() {
                             <NavLink exact to="/" activeClassName="active">{t('header.menu1')}</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink to="/about" activeClassName="active">About</NavLink>
+                            <NavLink to="/about" activeClassName="active">{t('header.menu2')}</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink to="/collection" activeClassName="active">Collection</NavLink>
+                            <NavLink to="/collection" activeClassName="active">{t('header.menu3')}</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink to="/contact" activeClassName="active">Contact</NavLink>
+                            <NavLink to="/contact" activeClassName="active">{t('header.menu4')}</NavLink>
                         </li>
                         <select id="languageSelect" onChange={handleChange}>
                             <option value="eng">English</option>
@@ -70,16 +70,16 @@ function Header() {
                <div className="sub-menu">
                <ul className="nav-list" >
                         <li className="nav-item ">
-                            <NavLink exact to="/" activeClassName="active">Home</NavLink>
+                            <NavLink exact to="/" activeClassName="active">{t('header.menu1')}</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink to="/about" activeClassName="active">About</NavLink>
+                            <NavLink to="/about" activeClassName="active">{t('header.menu2')}</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink to="/collection" activeClassName="active">Collection</NavLink>
+                            <NavLink to="/collection" activeClassName="active">{t('header.menu3')}</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink to="/contact" activeClassName="active">Contact</NavLink>
+                            <NavLink to="/contact" activeClassName="active">{t('header.menu4')}</NavLink>
                         </li>
 
                     </ul>

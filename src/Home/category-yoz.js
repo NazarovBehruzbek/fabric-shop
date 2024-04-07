@@ -2,8 +2,10 @@ import { Col, Row } from 'antd'
 import React from 'react'
 import "./category.scss"
 import image from "../images/winter/yoz.png"
+import { useTranslation } from 'react-i18next'
 
 export default function CategoryYoz () {
+  const [t] = useTranslation();
   return (
     <div className='container'>
         <div className='category category-yoz '>
@@ -11,7 +13,7 @@ export default function CategoryYoz () {
                 <Col lg={5} >
                   <div className='category-info'>
                   <p>100%</p>
-                    <span>Material quality</span>
+                    <span>{t('category.title1')}</span>
                   </div>
                 </Col>
                 <Col lg={9}>
@@ -19,9 +21,9 @@ export default function CategoryYoz () {
                 </Col>
                 <Col lg={10}>
                    <div className='category-info2'>
-                   <h2>'Tashkent Natural product'</h2>
-                    <p> has been a company that produces cotton fabrics for use all over the world for many years</p>
-                    <button>Collection</button>
+                   <h2>{t('category.title2')}</h2>
+                    <p>{t('category.text')}</p>
+                    <button>{t('home.btn')}</button>
                    </div>
                 </Col>
             </Row>

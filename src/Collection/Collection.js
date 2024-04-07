@@ -4,6 +4,7 @@ import { Row, Col, Pagination } from 'antd';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faChevronRight, faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import Data from '../Data/Data.js';
+import { useTranslation } from "react-i18next";
 
 function Collection() {
     const [open, setOpen] = useState(true);
@@ -12,6 +13,7 @@ function Collection() {
     const [currentPage, setCurrentPage] = useState(1);
     const [activeOption, setActiveOption] = useState(null);
     const [sortedData, setSortedData] = useState(Data);
+    const [t] = useTranslation();
 
     const sortByIncreasingPrice = (data) => {
         return data.slice().sort((a, b) => a.price - b.price);
@@ -76,12 +78,12 @@ function Collection() {
                 <Row>
                     <Col lg={5} md={5} > 
                         <div className="search-item">
-                            <input placeholder="Search here" />
+                            <input placeholder={t('collection.search')} />
                             <div className="icon"><FontAwesomeIcon className="icons" icon={faSearch} /></div>
                         </div>
 
                         <div className="select-item" >
-                            <h2 onClick={handleToggle}>Collection</h2>
+                            <h2 onClick={handleToggle}>{t('collection.title')}</h2>
                             {
                                 open ? <FontAwesomeIcon icon={faChevronDown} className="select-icon" onClick={handleToggle} /> : <FontAwesomeIcon icon={faChevronRight} className="select-icon" onClick={handleToggle} />
                             }
@@ -92,19 +94,19 @@ function Collection() {
                                             className={`option-p ${activeOption === 'spring' ? 'active' : ''}`}
                                             onClick={() => handleOptionClick('spring')}
                                         >
-                                            Spring Collection
+                                            {t('winter.titles')}
                                         </p>
 
                                         <p
                                             className={`option-p ${activeOption === 'winter' ? 'active' : ''}`}
                                             onClick={() => handleOptionClick('winter')}
                                         >
-                                            Winter Collection</p>
+                                           {t('winter.titley')}</p>
                                         <p
                                             className={`option-p ${activeOption === 'summer' ? 'active' : ''}`}
                                             onClick={() => handleOptionClick('summer')}
                                         >
-                                            Summer Collection</p>
+                                            {t('winter.titlew')}</p>
 
                                     </div> : ''
                             }
@@ -112,12 +114,12 @@ function Collection() {
                     </Col>
                     <Col lg={19} md={19}>
                         <div className="page-items">
-                            <h2>Collection</h2>
-                            <p>Showing 1-{itemsPerPage} of {totalItems}</p>
+                            <h2>{t('collection.title')}</h2>
+                            <p>{t('collection.show1')}-{itemsPerPage} {t('collection.show2')} {totalItems}</p>
                             <select name="cars" className="product" onChange={handleSortChange} defaultValue="initial">
-                                <option value="initial">Initial Sort</option>
-                                <option value="increase">Increase Sort</option>
-                                <option value="decrease">Decrease Sort</option>
+                                <option value="initial">{t('collection.select')}</option>
+                                <option value="increase">{t('collection.option1')}</option>
+                                <option value="decrease">{t('collection.option2')}</option>
                             </select>
                             <div>
                                 {renderItems()}

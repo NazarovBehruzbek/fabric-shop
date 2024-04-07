@@ -3,9 +3,11 @@ import "./winter.scss"
 import Data from "../Data/Data" 
 import useSharedStore from "../Store/store";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 export default function Spring (){
     const navigate = useNavigate();
     const {setId } = useSharedStore();
+    const [t] = useTranslation();
     const handleClick = (id) => {
         setId(id);
         navigate(`/product/${id}`);
@@ -15,8 +17,8 @@ export default function Spring (){
         <>
         <div className="container">
            <div className="winter">
-           <h2>Spring collection</h2>
-            <p>Tashkent Natural product</p>
+           <h2>{t('winter.titles')}</h2>
+            <p>{t('winter.subtitle')}</p>
            </div>
            <div className="wrapper">
             {
