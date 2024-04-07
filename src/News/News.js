@@ -6,7 +6,7 @@ import useSharedStore from "../Store/store";
 
 function NewsPage() {
     const navigate = useNavigate();
-    const { newsId, setnewsId } = useSharedStore();
+    const { setnewsId } = useSharedStore();
     const handleClick = (id) => {
         setnewsId(id);        
         navigate(`/news/${id}`);

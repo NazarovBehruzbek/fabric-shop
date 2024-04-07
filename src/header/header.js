@@ -5,10 +5,18 @@ import logo from "../images/logo.png"
 import { Drawer } from 'antd';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { useTranslation } from "react-i18next";
 
 function Header() {
     const [open, setOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+    const [t,i18n] = useTranslation()
+    
+    const handleChange = () => {
+        const selectedLanguage = document.getElementById("languageSelect").value;
+        i18n.changeLanguage(selectedLanguage);
+    };
+
     const showDrawer = () => {
         setOpen(true);
     };
@@ -39,7 +47,7 @@ function Header() {
                             <img src={logo} alt="Error" className="logo" />
                         </li>
                         <li className="nav-item ">
-                            <NavLink exact to="/" activeClassName="active">Home</NavLink>
+                            <NavLink exact to="/" activeClassName="active">{t('header.menu1')}</NavLink>
                         </li>
                         <li className="nav-item">
                             <NavLink to="/about" activeClassName="active">About</NavLink>
@@ -50,9 +58,9 @@ function Header() {
                         <li className="nav-item">
                             <NavLink to="/contact" activeClassName="active">Contact</NavLink>
                         </li>
-                        <select id="languageSelect">
-                            <option value="uzbek">Uzbek </option>
-                            <option value="english">English</option>
+                        <select id="languageSelect" onChange={handleChange}>
+                            <option value="eng">English</option>
+                            <option value="uz">Uzbek </option>
                         </select>
                         <div onClick={showDrawer} className="bars"><FontAwesomeIcon icon={faBars} /></div>
                     </ul>

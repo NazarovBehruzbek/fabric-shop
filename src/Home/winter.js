@@ -5,7 +5,7 @@ import useSharedStore from "../Store/store";
 import { useNavigate } from "react-router-dom";
 export default function Winter (){
     const navigate = useNavigate();
-    const { id, setId } = useSharedStore();
+    const { setId } = useSharedStore();
     const handleClick = (id) => {
         setId(id);        
         navigate(`/product/${id}`);

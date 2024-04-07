@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import news from "../images/news3.png"
 import "./Newscategory.scss";
 import News from "../Data/News";
 import useSharedStore from "../Store/store";

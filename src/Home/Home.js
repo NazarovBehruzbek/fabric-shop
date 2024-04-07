@@ -12,8 +12,12 @@ import avto from "../images/avto.svg"
 import retur from "../images/retuen.svg"
 import naush from "../images/naushnik.svg"
 import payment from "../images/payment.svg"
-
+import { useNavigate } from "react-router-dom"
 function Home() {
+    const navigate = useNavigate();
+    const  onClickN = () =>{
+        navigate('/collection');
+    }
     return (
         <>
             <div className="home container">
@@ -28,7 +32,7 @@ function Home() {
                         <div className="slider-item1">
                             <div className="slider-caption">
                                 <h1>Fashion Fabrics - 50% Off Stretch, Faux Fur & More</h1>
-                                <button className="slider-btn">SHOP NOW</button>
+                                <button onClick={onClickN} className="slider-btn">SHOP NOW</button>
                             </div>
                         </div>
                     </SwiperSlide>
@@ -36,7 +40,7 @@ function Home() {
                         <div className="slider-item2">
                         <div className="slider-caption">
                                 <h1>Fashion Fabrics - 50% Off Stretch, Faux Fur & More</h1>
-                                <button className="slider-btn">SHOP NOW</button>
+                                <button onClick={onClickN}  className="slider-btn">SHOP NOW</button>
                             </div>
                         </div>
                     </SwiperSlide>
@@ -44,7 +48,7 @@ function Home() {
                         <div className="slider-item3">
                         <div className="slider-caption">
                                 <h1>Fashion Fabrics - 50% Off Stretch, Faux Fur & More</h1>
-                                <button className="slider-btn">SHOP NOW</button>
+                                <button onClick={onClickN}  className="slider-btn">SHOP NOW</button>
                             </div>
                         </div>
                     </SwiperSlide>
