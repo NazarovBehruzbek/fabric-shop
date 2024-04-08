@@ -1,8 +1,8 @@
-import { Col, Row, Tabs, Rate, Form, Input,message } from "antd";
+import { Col, Row, Tabs, Rate, Form, Input, message } from "antd";
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
 import "./products.scss";
-import Data  from "../Data/Data";
+import Data from "../Data/Data";
 import useSharedStore from "../Store/store";
 import { useTranslation } from "react-i18next";
 const { TextArea } = Input;
@@ -10,7 +10,7 @@ const Products = () => {
     const { id } = useSharedStore();
     const [products, setProducts] = useState([]);
     const { TabPane } = Tabs;
-    const [form]= Form.useForm()
+    const [form] = Form.useForm()
     const [t] = useTranslation();
     const onFinish = (values) => {
         const telegram_bot_id = "7127598664:AAEXfRivlYDlHmGpewNnggFY9DWvgfZZ25o";
@@ -79,7 +79,21 @@ const Products = () => {
                                         <td>Tashkent Naturak Product</td>
                                     </tr>
                                 </table>
-                                <p>Category: <span><a href="/">Winter collecction</a></span></p>
+                                <p>Category: <a href="/">
+                                    {
+                                        (() => {
+                                            switch (true) {
+                                                case id <= 5:
+                                                    return <span>Winter Collection</span>;
+                                                case id >= 5 && id <= 10:
+                                                    return <span>Spring Collection</span>;
+                                                default:
+                                                    return <span>Summer Collection</span>;
+                                            }
+                                        })()
+                                    }
+                                </a></p>
+
                             </div>
                         </Col>
                     </Row>
@@ -122,45 +136,45 @@ const Products = () => {
                                 >
                                     <Row>
                                         <Col lg={12} md={24} sm={24} xs={24}>
-                                        <Form.Item
-                                        label="Name"
-                                        name="username"
-                                        className="rewiev-in"
-                                        rules={[
-                                            {
-                                                required: true,
-                                                message: 'Please input your username!',
-                                            },
-                                        ]}
-                                       
-                                    >
-                                        <Input style={{ height: '40px', borderColor: 'gray',width:'98%' }} />
-                                    </Form.Item>
+                                            <Form.Item
+                                                label="Name"
+                                                name="username"
+                                                className="rewiev-in"
+                                                rules={[
+                                                    {
+                                                        required: true,
+                                                        message: 'Please input your username!',
+                                                    },
+                                                ]}
+
+                                            >
+                                                <Input style={{ height: '40px', borderColor: 'gray', width: '98%' }} />
+                                            </Form.Item>
                                         </Col>
                                         <Col lg={12} md={24} sm={24} xs={24}>
-                                        <Form.Item
-                                        label="Family"
-                                        name="surname"
-                                        rules={[
-                                            {
-                                                required: true,
-                                                message: 'Please input your Family!',
-                                            },
-                                        ]}
-                                      
-                                    >
-                                        <Input style={{ height: '40px', borderColor: 'gray',width:'98%' }} />
-                                    </Form.Item>
+                                            <Form.Item
+                                                label="Family"
+                                                name="surname"
+                                                rules={[
+                                                    {
+                                                        required: true,
+                                                        message: 'Please input your Family!',
+                                                    },
+                                                ]}
+
+                                            >
+                                                <Input style={{ height: '40px', borderColor: 'gray', width: '98%' }} />
+                                            </Form.Item>
                                         </Col>
                                     </Row>
-                                  
-                                    <Form.Item label="Feedback"  name="feedback"
-                                      rules={[{ required: true, message: 'Please input your fadbeck!' }]}
+
+                                    <Form.Item label="Feedback" name="feedback"
+                                        rules={[{ required: true, message: 'Please input your fadbeck!' }]}
                                     >
                                         <TextArea rows={4} style={{ borderColor: 'gray' }} />
                                     </Form.Item>
                                     <Form.Item
-                                                                  >
+                                    >
                                         <button type="primary" htmlType="submit" className="send-request">
                                             {t('foter.send')}
                                         </button>

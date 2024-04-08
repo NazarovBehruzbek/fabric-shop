@@ -13,6 +13,7 @@ function Collection() {
     const [currentPage, setCurrentPage] = useState(1);
     const [activeOption, setActiveOption] = useState(null);
     const [sortedData, setSortedData] = useState(Data);
+    
     const [t] = useTranslation();
 
     const sortByIncreasingPrice = (data) => {
