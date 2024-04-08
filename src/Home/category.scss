@@ -34,7 +34,7 @@ $globalColor: #D09324;
     color: white;
 & h2{
     font-weight: bold;
-    font-size:35px
+    font-size:35px;
 }
 & p{
     font-size: 20px;
@@ -58,7 +58,14 @@ $globalColor: #D09324;
     }
 }
 }
+@media screen and (max-width:1216px) {
+ .category{
+        padding-bottom: 50px;
+    }
+    
+}
 @media screen and (min-width: 992px) and (max-width: 1200px) {
+   
     .category-info {
         color: white;
 

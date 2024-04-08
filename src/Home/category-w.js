@@ -2,9 +2,8 @@ import { Col, Row } from 'antd'
 import React from 'react'
 import "./category.scss"
 import image from "../images/winter/qish.png"
-import { useTranslation } from 'react-i18next'
-
-export default function CategoryW() {
+import { useTranslation } from "react-i18next";
+export default function CategoryW({onClickN}) {
   const [t] = useTranslation();
   return (
     <div className='container'>
@@ -23,7 +22,7 @@ export default function CategoryW() {
                    <div className='category-info2'>
                    <h2>{t('category.title2')}</h2>
                     <p> {t('category.text')}</p>
-                    <button>{t('home.btn')}</button>
+                    <button onClick={onClickN}>{t('home.btn')}</button>
                    </div>
                 </Col>
             </Row>

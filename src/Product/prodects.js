@@ -5,13 +5,15 @@ import "./products.scss";
 import Data from "../Data/Data";
 import useSharedStore from "../Store/store";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 const { TextArea } = Input;
 const Products = () => {
-    const { id } = useSharedStore();
+    const { id, setId } = useSharedStore();
     const [products, setProducts] = useState([]);
     const { TabPane } = Tabs;
     const [form] = Form.useForm()
     const [t] = useTranslation();
+    const navigate = useNavigate()
     const onFinish = (values) => {
         const telegram_bot_id = "7127598664:AAEXfRivlYDlHmGpewNnggFY9DWvgfZZ25o";
         const chat_id = 6706091019;
@@ -39,6 +41,21 @@ const Products = () => {
         const filteredProducts = Data.filter(item => item.id === id);
         setProducts(filteredProducts);
     }, [id]);
+
+    const handleClick = (id) => {
+        setId(id);
+        navigate(`/product/${id}`);
+        window.scrollTo(0, 0);
+    }
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+    }
+    const shuffledData = shuffleArray(Data);
+    const selectedItems = shuffledData.slice(0, 4);
 
     return (
         <div className="products">
@@ -190,13 +207,13 @@ const Products = () => {
                     <h2>{t('product.similar')}</h2>
                     <div className="wrapper">
                         {
-                            Data.slice(0, 4).map((item, index) => {
+                            selectedItems.map((item, index) => {
                                 return (
-                                    <div className="card" key={index} >
+                                    <div className="card" key={index} onClick={() => handleClick(item.id)}>
                                         <img src={item.img} alt={item.name} />
                                         <h3>{item.nameEn}</h3>
                                     </div>
-                                )
+                                );
                             })
                         }
                     </div>

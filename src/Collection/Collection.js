@@ -78,10 +78,10 @@ function Collection() {
             <div className="collection container">
                 <Row>
                     <Col lg={5} md={5} > 
-                        <div className="search-item">
+                        {/* <div className="search-item">
                             <input placeholder={t('collection.search')} />
                             <div className="icon"><FontAwesomeIcon className="icons" icon={faSearch} /></div>
-                        </div>
+                        </div> */}
 
                         <div className="select-item" >
                             <h2 onClick={handleToggle}>{t('collection.title')}</h2>

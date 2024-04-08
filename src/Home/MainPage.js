@@ -7,14 +7,20 @@ import Spring from "./spring";
 import NewsPage from "../News/News";
 import CategoryYoz from "./category-yoz";
 import Summer from "./summer";
+import { useNavigate } from "react-router-dom"
 const MainPage = () => {
+    const navigate = useNavigate()
+    const  onClickN = () =>{
+        navigate('/collection');
+        window.scrollTo(0, 0);
+    }
     return ( <>
-    <Home/>
-    <CategoryW/>
+    <Home onClickN={onClickN}/>
+    <CategoryW onClickN={onClickN}/>
     <Winter/>
-    <CategoryS/>
+    <CategoryS onClickN={onClickN}/>
     <Spring/>
-    <CategoryYoz/>
+    <CategoryYoz onClickN={onClickN}/>
     <Summer/>
     <NewsPage/>
     </> );

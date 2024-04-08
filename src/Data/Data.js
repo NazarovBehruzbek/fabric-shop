@@ -79,7 +79,7 @@ const winterData = [
     {
         id: 12,
         nameUz: "Zumrad",
-        nameEn: "Zumrad",
+        nameEn: "Diamond",
         img: require('../images/winter/zumrad.jpg'),
         price:5000
     },
@@ -93,7 +93,7 @@ const winterData = [
     {
         id: 14,
         nameUz: "Bolalar uchun",
-        nameEn: "Babay",
+        nameEn: "Baby",
         img: require('../images/winter/qoydolli.jpg'),
         price:578
     },

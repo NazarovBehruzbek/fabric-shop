@@ -4,7 +4,7 @@ import "./category.scss"
 import image from "../images/winter/kuz.png"
 import { useTranslation } from 'react-i18next'
 
-export default function CategoryS() {
+export default function CategoryS({onClickN}) {
   const [t] = useTranslation();
   return (
     <div className='container'>
@@ -23,7 +23,7 @@ export default function CategoryS() {
                    <div className='category-info2'>
                    <h2>{t('category.title2')}</h2>
                     <p> {t('category.text')}</p>
-                    <button>{t('home.btn')}</button>
+                    <button onClick={onClickN}>{t('home.btn')}</button>
                    </div>
                 </Col>
             </Row>

@@ -29,9 +29,9 @@ $globalColor: #D09324;
     &::after {
         content: "";
         position: absolute;
-        width: 100%;
+        width: 70%;
         height: 2px;
-        left: 0;
+        left: -3px;
         bottom: -4px; /* Move it just below the text */
         opacity: 0;
         transition: transform 0.5s ease, opacity 0.4s ease;
@@ -99,3 +99,8 @@ $globalColor: #D09324;
     
 }
  
+@media screen and (min-width: 330px) and (max-width: 600px) {
+    .ant-drawer-content-wrapper {
+      width: 250px !important
+    }
+}
