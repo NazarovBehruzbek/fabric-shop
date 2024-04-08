@@ -79,7 +79,7 @@ const Products = () => {
                                         <td>Tashkent Naturak Product</td>
                                     </tr>
                                 </table>
-                                <p>Category: <a href="/">
+                                <p>Category: <a href="/collection">
                                     {
                                         (() => {
                                             switch (true) {
