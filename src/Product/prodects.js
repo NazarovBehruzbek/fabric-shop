@@ -14,6 +14,7 @@ const Products = () => {
     const [form] = Form.useForm()
     const [t] = useTranslation();
     const navigate = useNavigate()
+    const selectedLanguage = localStorage.getItem('i18nextLng')
     const onFinish = (values) => {
         const telegram_bot_id = "7127598664:AAEXfRivlYDlHmGpewNnggFY9DWvgfZZ25o";
         const chat_id = 6706091019;
@@ -69,7 +70,7 @@ const Products = () => {
                         </Col>
                         <Col lg={12} md={24} sm={24} xs={24}>
                             <div className="category-table">
-                                <h2>{item.nameEn}</h2>
+                                <h2>{selectedLanguage === 'eng' ? item.nameEn : item.nameUz}</h2>
                                 <table>
                                     <tr>
                                         <th>Material:</th>
@@ -211,7 +212,7 @@ const Products = () => {
                                 return (
                                     <div className="card" key={index} onClick={() => handleClick(item.id)}>
                                         <img src={item.img} alt={item.name} />
-                                        <h3>{item.nameEn}</h3>
+                                        <h3>{selectedLanguage === 'eng' ? item.nameEn : item.nameUz}</h3>
                                     </div>
                                 );
                             })

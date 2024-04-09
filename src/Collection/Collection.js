@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import "./collection.scss";
 import { Row, Col, Pagination } from 'antd';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch, faChevronRight, faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { faChevronRight, faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import Data from '../Data/Data.js';
 import { useTranslation } from "react-i18next";
+import useSharedStore from "../Store/store.js";
+import { useNavigate } from 'react-router-dom';
 
 function Collection() {
     const [open, setOpen] = useState(true);
@@ -13,7 +15,10 @@ function Collection() {
     const [currentPage, setCurrentPage] = useState(1);
     const [activeOption, setActiveOption] = useState(null);
     const [sortedData, setSortedData] = useState(Data);
-    
+    const { setId } = useSharedStore();
+    const navigate = useNavigate();
+    const selectedLanguage = localStorage.getItem('i18nextLng')
+
     const [t] = useTranslation();
 
     const sortByIncreasingPrice = (data) => {
@@ -42,6 +47,11 @@ function Collection() {
     const handleToggle = () => {
         setOpen(!open);
     };
+    const handleClick = (id) => {
+        setId(id);
+        navigate(`/product/${id}`);
+        window.scrollTo(0, 0);
+    }
 
     const handleSortChange = (e) => {
         const selectedValue = e.target.value;
@@ -63,9 +73,9 @@ function Collection() {
         return (
             <div className="wrapper-c">
                 {itemsToDisplay.map((item, index) => (
-                    <div className="card-c" key={index}>
+                    <div className="card-c" key={index} onClick={() => handleClick(item.id)}>
                         <img src={item.img} alt={item.name} />
-                        <h3>{item.nameEn}</h3>
+                        <h3>{selectedLanguage === 'eng' ? item.nameEn : item.nameUz}</h3>
                     </div>
                 ))}
             </div>
@@ -77,7 +87,7 @@ function Collection() {
         <>
             <div className="collection container">
                 <Row>
-                    <Col lg={5} md={5} > 
+                    <Col lg={5} md={5} >
                         {/* <div className="search-item">
                             <input placeholder={t('collection.search')} />
                             <div className="icon"><FontAwesomeIcon className="icons" icon={faSearch} /></div>
@@ -102,7 +112,7 @@ function Collection() {
                                             className={`option-p ${activeOption === 'winter' ? 'active' : ''}`}
                                             onClick={() => handleOptionClick('winter')}
                                         >
-                                           {t('winter.titley')}</p>
+                                            {t('winter.titley')}</p>
                                         <p
                                             className={`option-p ${activeOption === 'summer' ? 'active' : ''}`}
                                             onClick={() => handleOptionClick('summer')}

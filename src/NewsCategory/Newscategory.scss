@@ -1,22 +1,26 @@
-.news-c{
+.news-c {
     margin-top: 100px;
     padding: 50px;
-    .container{
+
+    .container {
         width: 90%;
         margin: 0 auto;
     }
 }
-.news-img{
-        width: 100%;
-        border-radius:30px;
-        margin-bottom: 50px;
-        object-fit: cover;
+
+.news-img {
+    width: 100%;
+    border-radius: 30px;
+    margin-bottom: 50px;
+    object-fit: cover;
 
 }
-.info-news{
+
+.info-news {
     width: 80%;
     margin: 0 auto;
-    & p{
+
+    & p {
         line-height: 25px;
         padding: 10px;
         font-size: 20px;

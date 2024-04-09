@@ -84,7 +84,7 @@ function Contacts() {
                                         className="send-request-c"
                                     >
                                         <button type="primary" htmlType="submit" className="send-request">
-                                        {t('foter.send')}
+                                            {t('foter.send')}
                                         </button>
                                     </Form.Item>
                                 </Form>

@@ -21,7 +21,7 @@ i18n
         resources: {
             uz: { translation: uzTranslation },
             eng: { translation: enTranslation }
-        },        interpolation: {
+        }, interpolation: {
             escapeValue: false, // not needed for react as it escapes by default
         },
         detection: {

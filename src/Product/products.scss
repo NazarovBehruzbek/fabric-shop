@@ -1,163 +1,192 @@
 $globalColor: #D09324;
-.products{
-    margin-top: 150px;
+
+.products {
+  margin-top: 150px;
+  width: 100%;
+  padding: 30px 0;
+
+  & img {
     width: 100%;
-    padding: 30px 0;
-    & img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius:30px;
-        border: 1px solid gray;
-        display: block;
-        max-width: 100%;
-        height: auto;
-        transition: transform 0.3s ease-in-out;
-    }
-}
-.image-container {
-    position: relative;
-    cursor: pointer;
-    overflow: hidden;
-  
-    &:hover {
-      img {
-        transform: scale(1.2);
-      }
-    }
-  }
-  
-.category-table{
-    margin-left: 100px;
-    & h2{
-        font-size: 40px;
-    }
-   & table, td, th {
-        border: 1px solid;
-        padding: 15px;
-      }
-    & table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 30px;
-      }  
-      & th {
-        text-align: left;
-      }
-      & p{
-        font-size:20px;
-        padding:20px 0;
-      }
-      & a{
-        text-decoration: none;
-        color: red
-      }
-}
-.revrewiev-in{
-width: 90%;
-}
-@media screen and (max-width:992px) {
-  .category-table{
-    margin: 0;
-  }
-  
-}
-
-.custom-tabs {
-    color: black;
-    margin-top: 50px;
-  }
-
-  .image-container {
-    position: relative;
-    overflow: hidden; 
-  }
-  
-  .normal-image {
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+    border: 1px solid gray;
     display: block;
     max-width: 100%;
     height: auto;
-    transition: transform 0.3s ease-in-out; /* Smooth transition for zoom effect */
+    transition: transform 0.3s ease-in-out;
   }
-
-  .description{
-    width: 80%;
-    margin: 0 auto;
-    padding: 30px 0;
-    & h3 {
-      font-size: 30px;
-      color: gray;
-      padding: 20px 0;
-    }
-    & p {
-      font-size: 15px;
-      padding: 10px 0;
-      color: gray;
-    }
-
-  }
-  .similar{
-    & h2{
-      font-size: 50px;
-      text-align: center;
-      padding: 30px 0;
-    }
-  }
-  .review{
-    width: 80%;
-    margin: 0 auto;
-    padding: 30px 0;
-    & h3 {
-      font-size: 30px;
-      color: gray;
-      padding: 20px 0;
-    }
-    & p {
-      font-size: 20px;
-      padding: 10px 0;
-      color: gray
-    }
-  }
-  .wrapper{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr ));
-    gap: 20px;
 }
+
+.image-container {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+
+  &:hover {
+    img {
+      transform: scale(1.2);
+    }
+  }
+}
+
+.category-table {
+  margin-left: 100px;
+
+  & h2 {
+    font-size: 40px;
+  }
+
+  & table,
+  td,
+  th {
+    border: 1px solid;
+    padding: 15px;
+  }
+
+  & table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+  }
+
+  & th {
+    text-align: left;
+  }
+
+  & p {
+    font-size: 20px;
+    padding: 20px 0;
+  }
+
+  & a {
+    text-decoration: none;
+    color: red
+  }
+}
+
+.revrewiev-in {
+  width: 90%;
+}
+
+@media screen and (max-width:992px) {
+  .category-table {
+    margin: 0;
+  }
+
+}
+
+.custom-tabs {
+  color: black;
+  margin-top: 50px;
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.normal-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+  /* Smooth transition for zoom effect */
+}
+
+.description {
+  width: 80%;
+  margin: 0 auto;
+  padding: 30px 0;
+
+  & h3 {
+    font-size: 30px;
+    color: gray;
+    padding: 20px 0;
+  }
+
+  & p {
+    font-size: 15px;
+    padding: 10px 0;
+    color: gray;
+  }
+
+}
+
+.similar {
+  & h2 {
+    font-size: 50px;
+    text-align: center;
+    padding: 30px 0;
+  }
+}
+
+.review {
+  width: 80%;
+  margin: 0 auto;
+  padding: 30px 0;
+
+  & h3 {
+    font-size: 30px;
+    color: gray;
+    padding: 20px 0;
+  }
+
+  & p {
+    font-size: 20px;
+    padding: 10px 0;
+    color: gray
+  }
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
 .ant-rate-star {
   color: $globalColor;
 }
-.card{
+
+.card {
+  width: 100%;
+
+  & img {
     width: 100%;
-    & img{
-        width: 100%;
-        height: 70%;
-        object-fit: cover;
-        border-radius:30px;
-        border: 1px solid gray;
+    height: 70%;
+    object-fit: cover;
+    border-radius: 30px;
+    border: 1px solid gray;
+  }
+
+  & p {
+    font-size: 20px;
+    margin-top: 15px;
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    & p {
+      color: $globalColor;
+      font-weight: bold;
     }
-    & p{
-        font-size:20px;
-        margin-top: 15px;
-    }
-    &:hover{
-        cursor: pointer;
-        & p{
-            color:$globalColor;
-            font-weight:bold;
-        }
-    }
+  }
 }
-.send-request{
+
+.send-request {
   background-color: $globalColor;
-  color:white;
+  color: white;
   width: 200px;
   height: 50px;
-  border-radius:30px;
+  border-radius: 30px;
   font-size: 25px;
   border: none;
   transition: 0.3s ease;
   cursor: pointer;
-  &:hover{
-    background-color:gray;
+
+  &:hover {
+    background-color: gray;
   }
 }

@@ -1,71 +1,86 @@
 $globalColor: #D09324;
-.category{
-    background-color:#616884;
+
+.category {
+    background-color: #616884;
     width: 100%;
     border-radius: 20px;
     padding: 30px 50px;
     padding-bottom: 0;
     transition: 0.3s ease;
+
     &:hover {
         box-shadow: 10px 15px 15px #C89E9E;
     }
 }
-.cat-img{
-       width: 100%;
-       height: 100%;
+
+.cat-img {
+    width: 100%;
+    height: 100%;
 }
-.category-s{
-    background-color:#5F5383
+
+.category-s {
+    background-color: #5F5383
 }
-.category-yoz{
-    background-color:#2E7874;
+
+.category-yoz {
+    background-color: #2E7874;
 }
-.category-info{
+
+.category-info {
     color: white;
-& p{
-    font-weight: bold;
-    font-size:100px
-}
-& span{
-    font-size: 30px;
-}
-}
-.category-info2{
-    color: white;
-& h2{
-    font-weight: bold;
-    font-size:35px;
-}
-& p{
-    font-size: 20px;
-    width: 70%;
-    padding: 20px 0;
-}
-& button{
-    width: 150px;
-    height: 40px;
-    text-align: center;
-    cursor: pointer;
-    margin-top: 30px;
-    border: none;
-    font-size: 15px;
-    font-weight: bold;
-    border-radius: 20px;
-    transition: 0.3s ease;
-    &:hover{
-        background-color:$globalColor;
-        color:white;
+
+    & p {
+        font-weight: bold;
+        font-size: 100px
+    }
+
+    & span {
+        font-size: 30px;
     }
 }
+
+.category-info2 {
+    color: white;
+
+    & h2 {
+        font-weight: bold;
+        font-size: 35px;
+    }
+
+    & p {
+        font-size: 20px;
+        width: 70%;
+        padding: 20px 0;
+    }
+
+    & button {
+        width: 150px;
+        height: 40px;
+        text-align: center;
+        cursor: pointer;
+        margin-top: 30px;
+        border: none;
+        font-size: 15px;
+        font-weight: bold;
+        border-radius: 20px;
+        transition: 0.3s ease;
+
+        &:hover {
+            background-color: $globalColor;
+            color: white;
+        }
+    }
 }
+
 @media screen and (max-width:1216px) {
- .category{
+    .category {
         padding-bottom: 50px;
     }
-    
+
 }
+
 @media screen and (min-width: 992px) and (max-width: 1200px) {
-   
+
     .category-info {
         color: white;
 
@@ -101,21 +116,25 @@ $globalColor: #D09324;
             font-size: 20px;
         }
     }
-    .category-info2{
+
+    .category-info2 {
         color: white;
-    & h2{
-        font-weight: bold;
-        font-size:25px;
-        margin-top: 20px;
+
+        & h2 {
+            font-weight: bold;
+            font-size: 25px;
+            margin-top: 20px;
+        }
+
+        & p {
+            font-size: 15px;
+            width: 100%;
+            padding: 20px 0;
+        }
+
+        & button {
+            margin-top: 10px;
+        }
     }
-    & p{
-        font-size: 15px;
-        width: 100%;
-        padding: 20px 0;
-    }
-    & button{
-        margin-top: 10px;
-    }
-    }
-    
+
 }

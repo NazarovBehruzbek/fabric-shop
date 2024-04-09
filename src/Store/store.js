@@ -1,10 +1,10 @@
 // store.js
-import create from 'zustand';
+import {create} from 'zustand';
 const useSharedStore = create((set) => ({
-  id: null, 
+  id: null,
   setId: (newId) => set({ id: newId }),
   newsId: null,
-  setnewsId: (newId) => set({newsId:newId}),
+  setnewsId: (newId) => set({ newsId: newId }),
 
 }));
 

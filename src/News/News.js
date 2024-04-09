@@ -10,7 +10,7 @@ function NewsPage() {
     const { setnewsId } = useSharedStore();
     const [t] = useTranslation();
     const handleClick = (id) => {
-        setnewsId(id);        
+        setnewsId(id);
         navigate(`/news/${id}`);
         window.scrollTo(0, 0);
     }
@@ -23,7 +23,7 @@ function NewsPage() {
                     {
                         News.map((item, index) => {
                             return (
-                                <div className="card-n" key={index} onClick={()=>handleClick(item.id)}>
+                                <div className="card-n" key={index} onClick={() => handleClick(item.id)}>
                                     <img src={item.img} alt={item.name} />
                                     <h3>{t('news.card-title')}</h3>
                                     <p>{t('news.card-text')}</p>

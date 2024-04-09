@@ -1,11 +1,8 @@
 import React from "react";
-// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import "./home.scss"
-// import required modules
 import { Pagination } from 'swiper/modules';
 import { Col, Row } from "antd";
 import avto from "../images/avto.svg"
@@ -13,12 +10,14 @@ import retur from "../images/retuen.svg"
 import naush from "../images/naushnik.svg"
 import payment from "../images/payment.svg"
 import { useTranslation } from "react-i18next";
-function Home({onClickN}) {
+
+function Home({ onClickN }) {
     const [t] = useTranslation()
     return (
         <>
             <div className="home container">
                 <Swiper
+                    // ref={swiperRef}
                     pagination={{
                         clickable: true,
                     }}
@@ -96,4 +95,5 @@ function Home({onClickN}) {
         </>
     )
 }
+
 export default Home;

@@ -18,6 +18,8 @@ function About() {
                         <Col lg={12} md={24} sm={24} xs={24}>
                             <p>{t('about.text1')} </p>
                             <p> {t('about.text2')} </p>
+                            <p>{t('about.text1')} </p>
+                            <p> {t('about.text2')} </p>
                         </Col>
                     </Row>
                 </div>

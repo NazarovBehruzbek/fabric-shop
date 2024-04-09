@@ -1,18 +1,20 @@
 $globalColor: #D09324;
 $fontstyle: eurostile-extended, sans-serif;
-.foter{
+
+.foter {
   width: 100%;
   background-color: #F5F6F8;
   padding: 50px 0;
 }
 
-.foter-title{
+.foter-title {
   padding-bottom: 30px;
   font-size: 30px;
   display: flex;
   align-items: center;
 }
-.foter-title::before{
+
+.foter-title::before {
   content: "";
   background-color: $globalColor;
   display: inline-block;
@@ -21,45 +23,55 @@ $fontstyle: eurostile-extended, sans-serif;
   width: 30px;
   height: 4px;
 }
-.foter-glob{
+
+.foter-glob {
   display: flex;
 }
-.foter-adres{
+
+.foter-adres {
   display: flex;
   width: 70%;
 }
-.foter-info{
+
+.foter-info {
   width: 70%;
 }
-.foter-icon{
+
+.foter-icon {
   font-size: 20px;
   color: $globalColor;
   margin-right: 20px;
 }
-.social-network{
+
+.social-network {
   display: flex;
   padding: 20px 0;
-  & div{
+
+  & div {
     font-size: 20px;
     margin-right: 10px;
     cursor: pointer;
     color: black;
   }
-  & div:hover{
+
+  & div:hover {
     color: $globalColor;
   }
 }
-.foter-form{
+
+.foter-form {
   background-color: white;
   max-width: 92%;
   padding: 20px 20px;
   display: flex;
   justify-content: center;
 }
-.foter-items{
+
+.foter-items {
   display: flex;
 }
-.form-item{
+
+.form-item {
   & input {
     height: 40px;
     background-color: #F4F4F4;
@@ -69,6 +81,7 @@ $fontstyle: eurostile-extended, sans-serif;
     width: 93%;
     margin-right: 15px;
   }
+
   & button {
     background-color: $globalColor;
     color: white;
@@ -94,58 +107,77 @@ $fontstyle: eurostile-extended, sans-serif;
   width: 100%;
   height: 100%;
 }
+
 @media screen and (min-width: 992px) and (max-width: 1300px) {
-  .foter{
-    .container{
+  .foter {
+    .container {
       width: 95%;
       margin: 0 auto;
     }
   }
 
 }
+
 @media screen and (max-width: 992px) {
-  .foter{
-    .container{
+  .foter {
+    .container {
       width: 90%;
       margin: 0 auto;
     }
   }
-  .map-container{
+
+  .map-container {
     margin-top: 20px;
     width: 100%;
     height: 400px;
-    .map{
+
+    .map {
       height: 400px;
     }
   }
 }
-@media  screen and (min-width: 330px) and (max-width: 600px){
- 
-  .foter{
-    .info{
+
+@media screen and (min-width: 330px) and (max-width: 600px) {
+
+  .foter {
+    .info {
       padding: 30p 0;
     }
   }
-  .foter-glob{
+
+  .foter-glob {
     display: block;
-    .foter-adres{
+
+    .foter-adres {
       width: 100%;
       margin-bottom: 20px;
     }
   }
- .foter-form{
-   width: 100%;
-   margin-top: 30px;
-   display: block;
-   margin: 0 auto;
-   .foter-items{
-     display: block;
-     .form-item{
-       width: 100%;
-       & input{
-         width: 100%;
-       }
-     }
-   }
- }
+
+  .foter-form {
+    width: 100%;
+    margin-top: 30px;
+    display: block;
+    margin: 0 auto;
+
+    .foter-items {
+      display: block;
+
+      .form-item {
+        width: 100%;
+
+        & input {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .map-container {
+    height: 250px !important;
+  }
+
+  .map {
+    height: 250px !important;
+  }
 }

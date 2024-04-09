@@ -10,20 +10,20 @@ import Summer from "./summer";
 import { useNavigate } from "react-router-dom"
 const MainPage = () => {
     const navigate = useNavigate()
-    const  onClickN = () =>{
+    const onClickN = () => {
         navigate('/collection');
         window.scrollTo(0, 0);
     }
-    return ( <>
-    <Home onClickN={onClickN}/>
-    <CategoryW onClickN={onClickN}/>
-    <Winter/>
-    <CategoryS onClickN={onClickN}/>
-    <Spring/>
-    <CategoryYoz onClickN={onClickN}/>
-    <Summer/>
-    <NewsPage/>
-    </> );
+    return (<>
+        <Home onClickN={onClickN} />
+        <CategoryW onClickN={onClickN} />
+        <Winter />
+        <CategoryS onClickN={onClickN} />
+        <Spring />
+        <CategoryYoz onClickN={onClickN} />
+        <Summer />
+        <NewsPage />
+    </>);
 }
- 
+
 export default MainPage;
